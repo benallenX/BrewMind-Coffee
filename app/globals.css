@@ -3,11 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand: #6f4e37;
+  --brand-foreground: #fffaf3;
+  --cream: #faf3e8;
+  --cream-foreground: #3a2a1d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-cream: var(--cream);
+  --color-cream-foreground: var(--cream-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +24,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --cream: #241a12;
+    --cream-foreground: #f3e6d8;
   }
 }
 
