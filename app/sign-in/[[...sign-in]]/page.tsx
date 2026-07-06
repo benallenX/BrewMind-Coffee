@@ -1,26 +1,30 @@
 import Link from "next/link";
 import { SignIn } from "@clerk/nextjs";
+import { BrewMindLogo } from "@/components/brewmind-logo";
 
 export default function SignInPage() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center gap-8 bg-cream px-4 py-16 text-cream-foreground">
+    <div className="flex flex-1 flex-col items-center justify-center gap-8 bg-background px-4 py-16">
       <div className="flex flex-col items-center gap-2 text-center">
-        <Link href="/" className="text-2xl font-semibold tracking-tight text-brand">
-          BrewMind
+        <Link href="/">
+          <BrewMindLogo wordmarkClassName="text-2xl" />
         </Link>
-        <p className="max-w-sm text-sm text-cream-foreground/70">
+        <p className="max-w-sm text-sm text-foreground/70">
           Sign in to manage your subscription, saved drink, and pickup
           schedule.
         </p>
       </div>
-      <SignIn
-        appearance={{
-          variables: {
-            colorPrimary: "#6f4e37",
-            colorBackground: "#fffaf3",
-          },
-        }}
-      />
+      <div className="rounded-2xl border border-border bg-white/70 p-2 backdrop-blur-md dark:bg-white/5">
+        <SignIn
+          appearance={{
+            variables: {
+              colorPrimary: "#1b1310",
+              colorBackground: "transparent",
+              colorForeground: "#1b1310",
+            },
+          }}
+        />
+      </div>
     </div>
   );
 }

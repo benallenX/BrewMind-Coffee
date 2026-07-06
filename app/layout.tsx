@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ModeToggle } from "@/components/mode-toggle";
+import { BrewMindLogo } from "@/components/brewmind-logo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,36 +28,44 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ClerkProvider>
-          <header className="flex justify-between items-center p-4 h-16 border-b border-black/[.06] dark:border-white/[.08]">
-            <Link href="/" className="font-semibold tracking-tight text-brand dark:text-cream-foreground">
-              BrewMind
-            </Link>
-            <div className="flex items-center gap-4">
-              <Show when="signed-out">
-                <SignInButton>
-                  <button className="text-sm font-medium cursor-pointer">
-                    Sign in
-                  </button>
-                </SignInButton>
-                <SignUpButton>
-                  <button className="bg-brand text-brand-foreground rounded-full font-medium text-sm h-10 px-4 cursor-pointer">
-                    Get started
-                  </button>
-                </SignUpButton>
-              </Show>
-              <Show when="signed-in">
-                <Link href="/dashboard" className="text-sm font-medium">
-                  Dashboard
-                </Link>
-                <UserButton />
-              </Show>
-            </div>
-          </header>
-          {children}
-        </ClerkProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ClerkProvider>
+            <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-border bg-background/80 px-4 backdrop-blur-md sm:px-6">
+              <Link href="/">
+                <BrewMindLogo />
+              </Link>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <Show when="signed-out">
+                  <SignInButton>
+                    <button className="rounded-full px-3 py-2 text-sm font-medium text-foreground cursor-pointer">
+                      Sign in
+                    </button>
+                  </SignInButton>
+                  <SignUpButton>
+                    <button className="h-10 cursor-pointer rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105">
+                      Get started
+                    </button>
+                  </SignUpButton>
+                </Show>
+                <Show when="signed-in">
+                  <Link href="/dashboard" className="rounded-full px-3 py-2 text-sm font-medium text-foreground">
+                    Dashboard
+                  </Link>
+                  <UserButton />
+                </Show>
+                <ModeToggle />
+              </div>
+            </header>
+            {children}
+          </ClerkProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -21,13 +21,13 @@ export default async function DashboardPage() {
   ];
 
   return (
-    <div className="flex flex-1 flex-col items-center px-6 py-16">
+    <div className="flex flex-1 flex-col items-center bg-background px-6 py-16">
       <div className="flex w-full max-w-3xl flex-col gap-8">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">
             Welcome, {displayName}
           </h1>
-          <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+          <p className="mt-2 text-foreground/70">
             Subscription setup comes next.
           </p>
         </div>
@@ -35,10 +35,12 @@ export default async function DashboardPage() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="rounded-xl border border-black/[.08] p-5 dark:border-white/[.145]"
+              className="rounded-2xl border border-border bg-white/70 p-5 backdrop-blur-md dark:bg-white/5"
             >
-              <h2 className="font-medium">{card.title}</h2>
-              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              <h2 className="font-semibold tracking-tight text-foreground">
+                {card.title}
+              </h2>
+              <p className="mt-1 text-sm leading-6 text-foreground/70">
                 {card.description}
               </p>
             </div>
