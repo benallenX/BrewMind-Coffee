@@ -4,7 +4,7 @@ import { BrewMindLogo } from "@/components/brewmind-logo";
 
 export default function SignUpPage() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center gap-8 bg-background px-4 py-16">
+    <div className="flex flex-1 flex-col items-center justify-center gap-8 bg-background px-6 py-16">
       <div className="flex flex-col items-center gap-2 text-center">
         <Link href="/">
           <BrewMindLogo wordmarkClassName="text-2xl" />
@@ -18,9 +18,9 @@ export default function SignUpPage() {
         <SignUp
           appearance={{
             variables: {
-              colorPrimary: "#1b1310",
+              colorPrimary: "var(--primary)",
               colorBackground: "transparent",
-              colorForeground: "#1b1310",
+              colorForeground: "var(--foreground)",
             },
           }}
         />

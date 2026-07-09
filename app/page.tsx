@@ -40,7 +40,7 @@ export default function Home() {
             </Link>
             <Link
               href="/sign-in"
-              className="flex h-12 items-center justify-center rounded-full border border-border px-6 text-base font-medium text-foreground"
+              className="flex h-12 items-center justify-center rounded-full border border-border px-6 text-base font-medium text-foreground transition-transform hover:scale-105"
             >
               Sign in
             </Link>

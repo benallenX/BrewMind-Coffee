@@ -35,9 +35,13 @@ export default async function DashboardPage() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="rounded-2xl border border-border bg-white/70 p-5 backdrop-blur-md dark:bg-white/5"
+              className="rounded-2xl border border-border bg-white/70 p-6 backdrop-blur-md dark:bg-white/5"
             >
-              <h2 className="font-semibold tracking-tight text-foreground">
+              <span
+                aria-hidden="true"
+                className="inline-block h-2 w-2 rounded-full bg-brand"
+              />
+              <h2 className="mt-3 font-semibold tracking-tight text-foreground">
                 {card.title}
               </h2>
               <p className="mt-1 text-sm leading-6 text-foreground/70">

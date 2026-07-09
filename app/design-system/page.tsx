@@ -9,8 +9,8 @@ const swatches = [
 ];
 
 const badges = [
-  { label: "Active", className: "bg-emerald-100 text-emerald-800" },
-  { label: "Pending", className: "bg-amber-100 text-amber-800" },
+  { label: "Active", className: "bg-brand/15 text-brand" },
+  { label: "Pending", className: "border border-border text-foreground" },
   { label: "Paused", className: "bg-muted text-muted-foreground" },
 ];
 
