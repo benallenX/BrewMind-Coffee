@@ -1,15 +1,77 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+<<<<<<< HEAD
 
 @custom-variant dark (&:is(.dark *));
+
+:root {
+  /* cream base / espresso foreground */
+  --background: #faf3e8;
+  --foreground: #1b1310;
+  /* black/espresso primary (headings, primary CTAs) */
+  --primary: #1b1310;
+  --primary-foreground: #faf3e8;
+  /* caramel/coffee accent — warmth only, not primary */
+  --brand: #b5772e;
+  --brand-foreground: #fffaf3;
+  /* soft stone/oat muted surface */
+  --muted: #efe9e1;
+  --muted-foreground: #6b5d4f;
+  /* strong-enough border/focus contrast on a light glass UI */
+  --border: rgba(27, 19, 16, 0.12);
+  --cream: #faf3e8;
+  --cream-foreground: #3a2a1d;
+  --card: #faf3e8;
+  --card-foreground: #1b1310;
+  --popover: #faf3e8;
+  --popover-foreground: #1b1310;
+  --secondary: #efe9e1;
+  --secondary-foreground: #1b1310;
+  --accent: #efe9e1;
+  --accent-foreground: #1b1310;
+  --destructive: oklch(0.577 0.245 27.325);
+  --input: rgba(27, 19, 16, 0.16);
+  --ring: #1b1310;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+=======
+
+@custom-variant dark (&:is(.dark *));
+>>>>>>> dev
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-cream: var(--cream);
+  --color-cream-foreground: var(--cream-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+<<<<<<< HEAD
+  --font-heading: var(--font-geist-sans);
+=======
   --font-heading: var(--font-fraunces);
+>>>>>>> dev
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -25,6 +87,13 @@
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
+<<<<<<< HEAD
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+=======
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-success-foreground: var(--success-foreground);
@@ -37,6 +106,7 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+>>>>>>> dev
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -50,6 +120,41 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+<<<<<<< HEAD
+body {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* strong, visible focus states everywhere — accessibility over aesthetics */
+:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.dark {
+  /* espresso base / cream foreground */
+  --background: #1b1310;
+  --foreground: #faf3e8;
+  --primary: #faf3e8;
+  --primary-foreground: #1b1310;
+  --card: #241a15;
+  --card-foreground: #faf3e8;
+  --popover: #241a15;
+  --popover-foreground: #faf3e8;
+  --secondary: #2a201a;
+  --secondary-foreground: #faf3e8;
+  --muted: #2a201a;
+  --muted-foreground: #b8ac9e;
+  --accent: #2a201a;
+  --accent-foreground: #faf3e8;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(250, 243, 232, 0.14);
+  --input: rgba(250, 243, 232, 0.18);
+  --ring: #faf3e8;
+  --cream: #1d150f;
+  --cream-foreground: #f3e6d8;
+=======
 :root {
   /* Warm cream page background, deep espresso foreground. */
   --background: oklch(0.97 0.014 75);
@@ -115,6 +220,7 @@
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 16%);
   --ring: oklch(0.72 0.11 55);
+>>>>>>> dev
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -140,4 +246,8 @@
   html {
     @apply font-sans;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dev
