@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
-=======
-import { Button as ButtonPrimitive } from "@base-ui/react/button"
-import { cva, type VariantProps } from "class-variance-authority"
->>>>>>> dev
 
 import { cn } from "@/lib/utils"
 
@@ -50,7 +45,6 @@ function Button({
   className,
   variant = "default",
   size = "default",
-<<<<<<< HEAD
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -64,13 +58,6 @@ function Button({
       data-slot="button"
       data-variant={variant}
       data-size={size}
-=======
-  ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
-  return (
-    <ButtonPrimitive
-      data-slot="button"
->>>>>>> dev
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
