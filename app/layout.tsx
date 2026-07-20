@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import Link from "next/link";
 import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
 import { BrewMindLogo } from "@/components/brewmind-logo";
-=======
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
->>>>>>> dev
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,20 +17,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: "variable",
-  axes: ["opsz"],
-});
-
 export const metadata: Metadata = {
   title: "BrewMind Coffee",
-<<<<<<< HEAD
   description: "Subscription-first coffee ordering: choose a plan, save a drink, pick a pickup time.",
-=======
-  description: "Subscription coffee prepared around your routine.",
->>>>>>> dev
 };
 
 export default function RootLayout({
@@ -43,7 +28,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<<<<<<< HEAD
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
@@ -85,13 +69,6 @@ export default function RootLayout({
           </ClerkProvider>
         </ThemeProvider>
       </body>
-=======
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
->>>>>>> dev
     </html>
   );
 }
